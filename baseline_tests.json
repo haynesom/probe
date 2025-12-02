@@ -1,0 +1,69 @@
+{
+  "tests": [
+    {
+      "name": "GET /",
+      "method": "GET",
+      "endpoint": "/",
+      "expected_status": 200
+    },
+    {
+      "name": "POST /register",
+      "method": "POST",
+      "endpoint": "/register",
+      "body": {
+        "email": "baseline@test.com",
+        "password": "Password123!",
+        "name": "Baseline User"
+      },
+      "expected_status": 201
+    },
+    {
+      "name": "POST /login",
+      "method": "POST",
+      "endpoint": "/login",
+      "body": {
+        "email": "baseline@test.com",
+        "password": "Password123!"
+      },
+      "expected_status": 200
+    },
+    {
+      "name": "POST /properties",
+      "method": "POST",
+      "endpoint": "/properties",
+      "auth": true,
+      "body": {
+        "address": "100 Main St",
+        "rent": 1200,
+        "bedrooms": 3
+      },
+      "expected_status": 201
+    },
+    {
+      "name": "GET /properties/{id}",
+      "method": "GET",
+      "endpoint": "/properties/1",
+      "auth": true,
+      "expected_status": 200
+    },
+    {
+      "name": "PUT /properties/{id}",
+      "method": "PUT",
+      "endpoint": "/properties/1",
+      "auth": true,
+      "body": {
+        "address": "100 Main St",
+        "rent": 1300,
+        "bedrooms": 3
+      },
+      "expected_status": 200
+    },
+    {
+      "name": "DELETE /properties/{id}",
+      "method": "DELETE",
+      "endpoint": "/properties/1",
+      "auth": true,
+      "expected_status": 204
+    }
+  ]
+}
