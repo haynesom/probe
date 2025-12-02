@@ -11,7 +11,9 @@ Replication of Project
 
 4. Optionally configure authentication by entering your test email and password into the script variables.
 
-5. Run the baseline test suite by executing ./run_baseline.sh, which stores its results in logs/baseline_run.json.
+5. Run the baseline test suite by executing ./run_baseline.sh
 
-6. Run the LLM-style fuzzing probe using ./api_probe.sh, which saves its output in logs/probe_run.json.
+6. Run the LLM-style fuzzing probe using ./api_probe.sh
+
+7. Able to compare the printed out results of each test.
 
